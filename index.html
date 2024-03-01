@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Personal Dashboard</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="index.css"> 
+  </head>
+
+  <body>
+    <main>
+        <div id="theme" class="info-block">
+          <div class="theme-btn-container">
+            <button id="nature-btn" type="button" class="btn btn-secondary theme-btn"
+              data-bs-toggle="tooltip" data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="Show amazing nature images">
+              🌿
+            </button>
+
+            <button id="space-btn" type="button" class="btn btn-secondary theme-btn"
+                data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="Show NASA picture of the day">
+                🌌
+            </button>
+          </div>
+        </div>
+
+        <div class="top">
+          <div id="weather"></div>
+          <div class="time-container">
+            <h1 id="time" class="time">TIME HERE</h1>
+          </div>
+          <div class="coin-info-outer">
+            <div id='dropdown-btn-group' class="btn-group">
+              <button id='dropdown-btn' class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Select coin
+              </button>
+              <ul id="dropdown-menu" class="dropdown-menu">
+
+                <li class='dropdown-item' id='bitcoin-btn'>
+                  <img class="dropdown-coin-logo" src="img/bitcoin-logo.png"/><span>Bitcoin</span>
+                </li>
+
+                <li class='dropdown-item' id='ethereum-btn'>
+                  <img class="dropdown-coin-logo" src="img/ethereum-logo.png"/><span>Ethereum</span>
+                </li>
+
+                <li class='dropdown-item' id='tether-btn'>
+                  <img class="dropdown-coin-logo" src="img/tether-logo.png"/><span>Tether</span>
+                </li>
+
+                <li class='dropdown-item' id='solana-btn'>
+                  <img class="dropdown-coin-logo" src="img/solana-logo.png"/><span>Solana</span>
+                </li>
+
+                <li class='dropdown-item' id='dogecoin-btn'>
+                  <img class="dropdown-coin-logo" src="img/dogecoin-logo.png"/><span>Dogecoin</span>
+                </li>
+              </ul>
+            </div>
+            <div id="coin-data">
+              <div class="coin-info">
+                <div class="coin-info-top" id="coin-info-top">
+                </div>
+    
+                <div class="coin-price">
+                    <p id="current-price"></p>
+                    <p id="high-price"></p>
+                    <p id="low-price"></p>
+                </div>
+    
+                <div class="accordion" id="accordion">
+                    <div class="accordion-item" id="accordion-item">
+                        <h2 class="accordion-header">
+                        <button id="accordion-button" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+      
+                        </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                        <div class="accordion-body">
+                            <article id='accordion-body-inner' class="accordion-body-inner">
+                            </article>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p id="img-info"></p>
+
+          <div id="keep-img-div" class="keep-img-div">
+            <input type="checkbox" id="keep-img-check" name="keep-img-check" value="Keep image">
+            <label for="keep-img-check">Keep image</label><br>
+          </div>
+        </div>
+      </main>
+
+	  <script src="index.js" type="module"></script>
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+  </body>
+
+</html>

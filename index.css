@@ -1,0 +1,327 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    border: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+    list-style: none;
+}
+
+menu,
+ol,
+ul {
+    padding-left: 0;
+}
+
+article ol,
+article ul {
+    list-style-position: inside;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+          scroll-behavior: smooth;
+    }
+  }
+
+  label,
+  button,
+  select,
+  summary,
+  [type=radio],
+  [type=submit],
+  [type=checkbox] {
+      cursor: pointer;
+  }
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+/* ------------ */
+
+body {
+    margin: 0;
+    background: no-repeat center center fixed; 
+    background-size: cover;
+}
+
+main {
+    color: whitesmoke;
+    text-shadow: 0px 0px 20px #242424;
+    text-align: center;
+    height: 100vh;
+    padding-top: 1em;
+}
+
+.top {
+    display: flex;
+    padding: 1.5em 1em 0;
+    margin-top: 2.5em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 90%;
+}
+  
+#theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-btn-container {
+    padding-bottom: 1em;
+}
+
+.theme-btn {
+    background-color: transparent !important;
+    border: none !important;
+    padding-right: 0.7em;
+    font-size: 1.2rem;
+}
+
+#weather {
+    position: relative;
+    width: 200px;
+}
+
+.weather-icon {
+    width: 130px;
+    position: absolute;
+    top: -55px; 
+    left: 9px;
+}
+
+.weather-text {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.weather-temp {
+    font-size: 1.8rem;
+    margin: 0 0 0 96px;
+}
+
+.weather-city {
+    margin: 0 0 0 45px;
+}
+
+.time-container {
+    padding: 2em 0;
+}
+
+.time-container h1 {
+    font-size: 3rem;
+}
+
+/* ------ coin ------- */
+
+.coin-info-outer {
+    margin-bottom: 80px;
+    text-align: left;
+}
+
+#coin-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.coin-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 2em 0 0;
+}
+
+.coin-info-top {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 1em;
+}
+
+.coin-logo {
+    max-width: 100px;
+}
+
+.coin-price {
+    text-align: left;
+}
+
+#accordion {
+    width: 220px;
+    padding: 0;
+}
+
+#accordion-button {
+    padding: 0.6em 0.3em;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dropdown-coin-logo {
+    max-width: 20px;
+}
+
+#img-info {
+    justify-self: end;
+    max-width: 600px;
+    text-align: left;
+    padding: 0 1.5em;
+}
+
+.keep-img-div {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+input[type="checkbox"] {
+    accent-color:  #5bd75b; 
+    width: 18px;
+    height: 18px;
+}
+
+
+.green-style {
+    background-color: #4CAF50;
+    color: whitesmoke;
+    border: 2px solid #4CAF50;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.green-style:hover {
+    background-color: #45a049;
+    border: 2px solid #45a049;
+}
+
+.green-style:focus {
+    background-color: #45a049;
+    border: 2px solid #45a049;
+}
+
+/* Active (clicked) effect */
+.green-style:active {
+    background-color: #39843d;
+    border: 2px solid #39843d;
+}
+
+/* ----- Blue style ------ */
+
+.blue-style {
+    background-color: #001f3f;
+    color: #ffffff;
+    border: 2px solid #001f3f;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.blue-style:hover {
+    color:  #b0b0b0;
+    background-color: #003366;
+    border: 2px solid #003366;
+}
+
+/* Hover effect */
+.blue-style:focus {
+    color:  #b0b0b0;
+    background-color: #003366;
+    border: 2px solid #003366;
+}
+
+/* Active (clicked) effect */
+.blue-style:active {
+    color:  #b0b0b0;
+    background-color: #000c19;
+    border: 2px solid #000c19;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 620px) {
+    .top {
+        margin-top: 1em;
+        padding: 0 0.2em 0 1.8em;
+        display: grid;
+        grid-template: 50% 45% 5% / 25% 50% 25%;
+        grid-template-areas:
+            "coin . weather"
+            ".  time ."
+            "img-info . keep";
+    }
+
+    .theme-btn {
+        font-size: 1.4rem;
+    }
+
+    #weather {
+        grid-area: weather;
+        justify-content: flex-end;
+        justify-self: end;
+        align-self: start;
+        margin: 2em 0 0 1em;
+    }
+
+    .time-container {
+        padding: 0;
+        grid-area: time;
+        align-self: start;
+    }
+
+    .time-container h1 {
+        font-size: 4.5rem;
+    }
+
+    .coin-info-outer {
+        grid-area: coin;
+    }
+
+    .accordion-item {
+        position: absolute;
+        width: 220px;
+    }
+    
+    #img-info {
+        justify-self: start;
+        grid-area: img-info;
+        padding: 0;
+    }
+
+    #keep-img-div {
+        grid-area: keep;
+        justify-content: flex-end;
+        justify-self: end;
+        margin-right: 1em;
+    }
+
+}
